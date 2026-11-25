@@ -1,0 +1,1 @@
+Previous local foundation: 12/12 offline scripted tests passed. This is historical evidence, not CI verification of the GitHub revision. Run python -m unittest discover -s tests -v from agentic/ for current results.
