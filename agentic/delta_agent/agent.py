@@ -40,7 +40,7 @@ class Agent:
         motion_requested=False
         try:
             for _ in range(self.max_rounds):
-                msg=self.model.complete(self.messages,TOOLS)
+                msg=self.model.complete(self.messages,getattr(self.dispatcher,"tools",TOOLS))
                 calls=msg.get('tool_calls') or []
                 self.messages.append({'role':'assistant','content':msg.get('content') or '',**({'tool_calls':calls} if calls else {})})
                 if not calls: return msg.get('content') or 'No response.'

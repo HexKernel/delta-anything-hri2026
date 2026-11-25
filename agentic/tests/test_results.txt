@@ -1,1 +1,1 @@
-Previous local foundation: 12/12 offline scripted tests passed. This is historical evidence, not CI verification of the GitHub revision. Run python -m unittest discover -s tests -v from agentic/ for current results.
+Local related foundation: 12 tests passed. Local extended simulation: 21 tests passed on 2026-11-25; synthetic ideal-hand cup final error 0.008537 m (23 steps), phone 0.010278 m (17 steps). This is local evidence, not remote CI or live-model/voice/hardware validation. Rerun against the committed revision.

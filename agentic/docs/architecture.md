@@ -24,3 +24,9 @@ A real controller must manage session IDs, deadlines, sequence numbers, observed
 AG-01 draft pending review; AG-03 bounded tool loop and optional local transport; AG-04 mock backend; AG-08 software safeguards only; AG-02 typed input; AG-05–07 require perception and frame mapping; AG-09 hardware integration blocked until interface and safety validation; AG-10–12 demonstrations, evaluation and documentation remain in progress.
 
 No novelty or human performance claim is established.
+
+## Extension: synthetic state and closed-loop controller
+
+SimDelta adds synthetic hand and target positions in meters, monotonic simulation timestamps, a yaw-only inverse rotation into the skin frame, target acceptance, normalized error vectors, and termination on target-region tolerance, stale observations, timeout or cancellation. The simulation uses an ideal hand model, not a human response model. No grasp is inferred from target-region completion. A real 3D mapping requires full calibrated orientation and a validated signed depth vocabulary.
+
+The extended dispatcher exposes list_targets to the agent. The optional voice adapter captures explicit short recordings, transcribes them locally and asks for transcript confirmation. The demo runs on explicit steps; no real-time physical or safety claims are made.
